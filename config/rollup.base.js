@@ -1,8 +1,6 @@
 /**
  * @description rollup base config
  */
-
-import path from 'path';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import nodeResolve from '@rollup/plugin-node-resolve';
@@ -19,25 +17,22 @@ export const extensions = ['.js', '.jsx', '.ts', '.tsx'];
  */
 function genBaseConf(format) {
   return {
-    input: path.resolve(__dirname, './src/index.ts'),
+    input: 'src/index.ts',
     output: {},
     plugins: [
+      commonjs(),
       peerDepsExternal(), // 打包结果不包含 package.json 的 peerDependencies
       json({
         compact: true,
         indent: '  ',
         preferConst: true,
       }),
-      typescript({
-        clean: true,
-        tsconfig: path.resolve(__dirname, './tsconfig.json'),
-      }),
+      typescript(),
       nodeResolve({
         browser: true, // 重要
         mainFields: format === 'esm' ? ['module', 'main'] : ['main'],
         extensions,
       }),
-      commonjs(),
       // del({ targets: 'dist/*' }),
     ],
     external: ['react', 'react-dom'],

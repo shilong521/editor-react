@@ -1,9 +1,10 @@
 import { useContext, useRef } from 'react';
-import { CustomUpload, EditorConfig } from '../../LongEditor';
 import { Icon, Message, Popover } from '@arco-design/web-react';
 import { handleFileUpload, insertNodes } from '../../editor/WithEditor';
 import { isEmpty } from 'lodash';
 import { EditorType } from '../../interface/withEditorProps';
+import EditorConfig from '../../provider/EditorConfig';
+import CustomUpload from '../../provider/CustomUpload';
 
 //上传视频文件
 const uploadVideo = async (editor: EditorType, file: File) => {

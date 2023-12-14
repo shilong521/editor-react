@@ -45,7 +45,6 @@ function genProdConf(format) {
   return {
     input,
     output: {
-      sourcemap: true,
       ...output,
     },
     external,

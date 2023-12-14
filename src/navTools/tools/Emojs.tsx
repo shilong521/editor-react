@@ -2,7 +2,7 @@ import { Button, Icon, Popover } from '@arco-design/web-react';
 import { Transforms } from 'slate';
 import { emojiMap } from '../../consts/emojs';
 import { useContext } from 'react';
-import { EditorConfig } from '../../LongEditor';
+import EditorConfig from '../../provider/EditorConfig';
 
 export default function EmojsTool() {
   const { editor } = useContext(EditorConfig);

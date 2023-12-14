@@ -1,10 +1,10 @@
 import { useContext, useRef } from 'react';
 import { Icon, Message, Popover } from '@arco-design/web-react';
-import { CustomUpload, EditorConfig } from '../../LongEditor';
 import { handleFileUpload, insertNodes } from '../../editor/WithEditor';
 import { EditorType } from '../../interface/withEditorProps';
 import { isEmpty } from 'lodash';
-
+import EditorConfig from '../../provider/EditorConfig';
+import CustomUpload from '../../provider/CustomUpload';
 //上传图片文件
 const uploadImg = async (editor: EditorType, file: File) => {
   return new Promise(() => {

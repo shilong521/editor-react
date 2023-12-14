@@ -6,14 +6,14 @@ const name = 'longEditor';
 const configList = [];
 
 // umd
-const umdConf = createRollupConfig({
-  output: {
-    file: pkg.main,
-    format: 'umd',
-    name,
-  },
-});
-configList.push(umdConf);
+// const umdConf = createRollupConfig({
+//   output: {
+//     file: pkg.main,
+//     format: 'umd',
+//     name,
+//   },
+// });
+// configList.push(umdConf);
 
 // esm
 const esmConf = createRollupConfig({

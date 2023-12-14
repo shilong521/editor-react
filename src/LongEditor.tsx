@@ -1,25 +1,16 @@
 import './styles/global.less';
-import { createContext, useMemo } from 'react';
+import { useMemo } from 'react';
 import { Descendant, createEditor } from 'slate';
 import { withHistory } from 'slate-history';
 import { Editable, Slate, withReact } from 'slate-react';
 import NavTools from './navTools/NavTools';
 import RenderElement from './renderElement/RenderElement';
-import {
-  CustomUploadProps,
-  EditorValueProps,
-  LongEditorProps,
-} from './interface/longEditorProps';
-import { EditorType } from './interface/withEditorProps';
+import { EditorValueProps, LongEditorProps } from './interface/longEditorProps';
 import { omitBy } from 'lodash';
 import { Spin } from '@arco-design/web-react';
 import { withEditor } from './editor/WithEditor';
-
-const EditorConfig = createContext<{ editor: EditorType }>({
-  editor: withEditor(withHistory(withReact(createEditor()))),
-});
-
-const CustomUpload = createContext<CustomUploadProps>({});
+import EditorConfig from './provider/EditorConfig';
+import CustomUpload from './provider/CustomUpload';
 
 function LongEditor(props: LongEditorProps) {
   const {
@@ -100,4 +91,4 @@ function LongEditor(props: LongEditorProps) {
   );
 }
 
-export { EditorConfig, CustomUpload, LongEditor };
+export { LongEditor };

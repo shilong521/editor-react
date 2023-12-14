@@ -1407,12 +1407,6 @@
   resolved "https://bnpm.byted.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
-"@longreact/editor@file:":
-  version "0.0.1"
-  resolved "file:"
-  dependencies:
-    "@longreact/editor" "file:"
-
 "@nicolo-ribaudo/chokidar-2@2.1.8-no-fsevents.3":
   version "2.1.8-no-fsevents.3"
   resolved "https://bnpm.byted.org/@nicolo-ribaudo/chokidar-2/-/chokidar-2-2.1.8-no-fsevents.3.tgz"
@@ -1507,6 +1501,12 @@
   version "4.6.1"
   resolved "https://bnpm.byted.org/@rollup/rollup-darwin-x64/-/rollup-darwin-x64-4.6.1.tgz"
   integrity sha512-LoSU9Xu56isrkV2jLldcKspJ7sSXmZWkAxg7sW/RfF7GS4F5/v4EiqKSMCFbZtDu2Nc1gxxFdQdKwkKS4rwxNg==
+
+"@shilong521/editor-react@file:":
+  version "0.0.5"
+  resolved "file:"
+  dependencies:
+    "@shilong521/editor-react" "file:"
 
 "@trysound/sax@0.2.0":
   version "0.2.0"
