@@ -1,12 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+/config
+/demo
+/dist
 /node_modules
 /yarn-error.log
-
-# production
-/dist
-/build
-
-# misc
 .DS_Store
+.gitignore
+.npmignore
+stats.html
+test.ts
